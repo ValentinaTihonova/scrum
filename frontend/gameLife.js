@@ -35,7 +35,14 @@ canvas.onclick = function(event)
 
 	x = Math.floor(x/100); //800/100 = 8
 	y = Math.floor(y/63); //504/63 = 8
-	subFieldArr[y][x] = 1;
+
+	// Как закрасил, так и раскрасил
+	if (subFieldArr[y][x] == 1) {
+		subFieldArr[y][x] = 0;
+	}else{
+		subFieldArr[y][x] = 1;
+	}
+	
 	console.log(subFieldArr);
 	drawSubField();
 }
@@ -91,10 +98,23 @@ function drawSubField()
 	}
 }
 
-function createLife(){
+//создаем жизнь
+function createLife(arr){
 
 }
 
+function pow(x, n) {
+      /* код функции, пока что пусто */
+    }
+arr = subFieldArr;
+createLife(arr);
+
+//Убиваем жизнь
 function deadLife(){
-	
+
+}
+
+//Проверяем поле
+function checkField(){
+
 }
