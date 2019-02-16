@@ -35,7 +35,13 @@ canvas.onclick = function(event)
 
 	x = Math.floor(x/100); //800/100 = 8
 	y = Math.floor(y/63); //504/63 = 8
-	subFieldArr[y][x] = 1;
+	if(subFieldArr[y][x] == 0){
+		subFieldArr[y][x] = 1;
+	}
+	else if(subFieldArr[y][x] == 1)
+	{
+	    subFieldArr[y][x] = 0
+	}
 	console.log(subFieldArr);
 	drawSubField();
 }
@@ -83,8 +89,15 @@ function drawSubField()
 	    	//присваевам массиву 1 если на нем есть клик
 	    	if(subFieldArr[i][j] == 1)
 	    	{
+	    		ctx.fillStyle  = myColor;
 	    		ctx.fillRect(j*100, i*63, 100, 63);
 	    	}
+	    	else if(subFieldArr[i][j] == 0)
+	    	{
+	    		ctx.fillStyle  = "white";
+	    		ctx.fillRect(j*100+1, i*63+1, 98, 61);
+	    	}
+
 
 	    }	
 
