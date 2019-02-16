@@ -90,7 +90,7 @@ function drawSubField()
 	    	if(subFieldArr[i][j] == 1)
 	    	{
 	    		ctx.fillStyle  = myColor;
-	    		ctx.fillRect(j*100, i*63, 100, 63);
+	    		ctx.fillRect(j*100+1, i*63+1, 98, 61);
 	    	}
 	    	else if(subFieldArr[i][j] == 0)
 	    	{
