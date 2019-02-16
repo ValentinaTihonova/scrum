@@ -90,3 +90,11 @@ function drawSubField()
 
 	}
 }
+
+function createLife(){
+
+}
+
+function deadLife(){
+	
+}
