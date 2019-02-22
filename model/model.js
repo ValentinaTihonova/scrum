@@ -61,9 +61,9 @@ class gameField{
         let n=this.mainField.length;
         let m=this.mainField[0].length;
 
-        for(let i=1; i<n; ++i){
+        for(let i=0; i<n; ++i){
         
-                for(let j=1; j<m; ++j){
+                for(let j=0; j<m; ++j){
                 
                    if(this.mainField[i][j]===1){
                         let neighbors=this.neighborsCount(i,j)
