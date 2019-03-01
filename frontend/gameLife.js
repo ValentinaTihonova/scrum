@@ -149,7 +149,3 @@ function randomFill()
 
 
 
-function pow(x, n) {
-      /* код функции, пока что пусто */
-    }
-
