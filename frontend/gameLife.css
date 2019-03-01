@@ -2,3 +2,8 @@ canvas{
 	border: 2px solid silver;
 	border-radius: 5px;
 }
+
+#input{
+	border-radius: 5px;
+	width: 329px;
+}
