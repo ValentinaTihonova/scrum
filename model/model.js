@@ -1,21 +1,30 @@
 'use strict'
+// Класс gamefield является моделью игры "Жизнь" в нем реализованы правила игры
 class gameField{
+    //Конструктор инициализирует основное поле игры
+    //На вход подается двумерный массив из 0 и 1
     constructor(field){
             
     this.mainField=field;
     
     
     }
+    //Возвращает поле игры
     getField(){
         return this.mainField
     }
 
+    // Считает количество соседей у клетки.  
+    // На входе i - номер строки , j-номер столбца
+    // на выходе количество соседей клетки 
     neighborsCount(i,j){
  
             let n=this.mainField.length-1;
             let m=this.mainField[0].length-1;
             let mainField=this.mainField;
             let field=this.mainField;
+
+            //внутрення функция исправляет выход за пределы массива
             function get(i0,j0){
             
                 if(i0<0 || j0<0 || i0>n || j0>m){
@@ -39,6 +48,7 @@ class gameField{
     
     }
 
+    //Метод производит процесс зарождения новых клеток согласно правилам
     born(){
         let n=this.mainField.length;
         let m=this.mainField[0].length;
@@ -57,6 +67,7 @@ class gameField{
         }
     }
     
+    //метод производит отмирание новых клеток согласно правилам
     death(){
         let n=this.mainField.length;
         let m=this.mainField[0].length;
@@ -77,4 +88,4 @@ class gameField{
    
 }
 
-module.exports={gameField}
+//module.exports={gameField}
